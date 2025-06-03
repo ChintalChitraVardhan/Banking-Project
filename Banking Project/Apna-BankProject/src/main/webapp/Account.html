@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Enhanced Form with Animations</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background Animation */
+        body {
+            height: 100vh;
+            background: linear-gradient(-45deg, #23a6d5, #23d5ab, #e94057, #f27121);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Form Styling */
+        form {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-50px);
+            opacity: 0;
+            animation: slideIn 1s ease forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            margin-bottom: 1em;
+            color: #333;
+        }
+
+        /* Input Styling */
+        input[type="text"], input[type="submit"], input[type="reset"] {
+            width: 100%;
+            padding: 0.75em;
+            margin-bottom: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+
+        /* Button Styling */
+        input[type="submit"], input[type="reset"] {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+
+        input[type="reset"] {
+            background-color: #e74c3c;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #c0392b;
+        }
+
+        /* Label Styling */
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <form action="ac" method="post">
+        <h2>Sign Up</h2>
+        <label for="uname">UserName:</label>
+        <input type="text" id="uname" name="uname" placeholder="Enter your username">
+        
+        <label for="pword">Password:</label>
+        <input type="text" id="pword" name="pword" placeholder="Enter your password">
+        
+        <label for="repword">Re-Password:</label>
+        <input type="text" id="repword" name="repword" placeholder="Re-enter your password">
+        
+        <label for="amt">Amount:</label>
+        <input type="text" id="amt" name="amt" placeholder="Enter amount">
+        
+        <label for="add">Address:</label>
+        <input type="text" id="add" name="add" placeholder="Enter address">
+        
+        <label for="phno">Phone:</label>
+        <input type="text" id="phno" name="phno" placeholder="Enter phone number">
+        
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+    </form>
+</body>
+</html>

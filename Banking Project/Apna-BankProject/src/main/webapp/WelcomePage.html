@@ -1,0 +1,178 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to APANA-BANK</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+    }
+
+    .navbar {
+         background-color: #1d69e0;
+         overflow: hidden;
+         padding: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: relative;
+    }
+
+    .navbar h1 {
+        color: white;
+        font-size: 30px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .navbar a {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 14px 20px;
+        text-align: center;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar a:hover {
+        background-color: #555;
+        color: #fff;
+        transform: scale(1.05);
+    }
+
+    .hero-section {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        overflow: hidden;
+    }
+
+    #bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .hero-section h1 {
+         color: white;
+         font-size: 30px;
+         margin: 0;
+         text-align: center;
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
+    }
+
+    .real-time-info {
+        background-color: #1d69e0;
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .real-time-info span {
+        font-weight: bold;
+    }
+
+    .news-ticker {
+        font-size: 16px;
+        color: #fff;
+        background-color: #333;
+        padding: 5px 0;
+        margin: 20px 0;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .support-btn {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .support-btn:hover {
+        background-color: #218838;
+    }
+
+    .about-us-section {
+        text-align: center;
+        padding: 40px;
+        background-color: #f7f7f7;
+    }
+
+    .about-us-section h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #1d69e0;
+    }
+
+    .about-us-section p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 10px 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <h1>Welcome to APANA-BANK</h1>
+    <a href="Account.html">Create Account</a>
+    <a href="Balance.html">Check Balance</a>
+    <a href="Deposit.html">Deposit</a>
+    <a href="Withdraw.html">Withdraw</a>
+    <a href="Transfer.html">Transfer</a>
+    <a href="Close.html">Close Account</a>
+    <a href="About.html">About Us</a>
+</div>
+
+<div class="hero-section">
+    <video autoplay muted loop id="bg-video">
+        <source src="video/axis-bank-dil-se-open-stories-2022-tanumita-chakraborty-1080-publer.io.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<div class="real-time-info">
+    <div><span>Latest Bank News:</span> New mobile app launching soon! Get ready for exclusive customer rewards.</div>
+    <div><span>Exchange Rate (USD to EUR):</span> 1 USD = 0.92 EUR</div>
+    <div><span>Customer Satisfaction:</span> 92% Satisfaction Rating!</div>
+</div>
+
+<div class="news-ticker">
+    <marquee behavior="scroll" direction="left">Latest Bank News: New mobile banking app coming soon! Stay tuned for exclusive offers for new customers. Don't miss out on amazing rewards!</marquee>
+</div>
+
+<div class="about-us-section">
+    <h2>About APANA-BANK</h2>
+    <p>Welcome to APANA-BANK, where your financial security is our top priority. We are committed to providing you with reliable banking services, including account management, secure deposits, easy withdrawals, and seamless transfers. Our innovative platform is designed to make your banking experience fast, secure, and hassle-free.</p>
+    <p>Whether you are opening a new account, checking your balance, or transferring funds, we are here to help you every step of the way. Trust APANA-BANK to meet all your financial needs!</p>
+</div>
+
+<div style="text-align: center; margin-top: 30px;">
+    <a href="support.html" class="support-btn">Need Help? Contact Support</a>
+</div>
+
+</body>
+</html>

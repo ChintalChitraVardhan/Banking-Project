@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Bank Services</title>
+<style>
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Body Styling */
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #00796b, #2ec4b6, #cbf3f0);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  /* Container Styling */
+  .about-container {
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+    overflow: hidden;
+  }
+
+  /* Homepage Link Styling */
+  .home-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #00796b;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: slideInFromLeft 1.2s ease-in-out;
+  }
+
+  .home-link:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+  }
+
+  /* Section Headings */
+  .about-container h2 {
+    font-size: 2rem;
+    color: #00796b;
+    margin-bottom: 1rem;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    animation: fadeSlideIn 1.5s ease-in-out forwards;
+  }
+
+  .about-container h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #00796b;
+    display: block;
+    margin: 0.5rem auto;
+    border-radius: 2px;
+  }
+
+  /* Section Styling */
+  .section {
+    background: #f1f8f7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: scaleUp 1.2s ease-in-out forwards;
+  }
+
+  /* Delay animations for each section */
+  .section:nth-child(2) { animation-delay: 0.5s; }
+  .section:nth-child(3) { animation-delay: 1s; }
+  .section:nth-child(4) { animation-delay: 1.5s; }
+  .section:nth-child(5) { animation-delay: 2s; }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes scaleUp {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes slideInFromLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  /* Section Content Styling */
+  .section p {
+    margin-top: 0.5rem;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .section ul {
+    padding-left: 1.5rem;
+    color: #333;
+  }
+
+  /* Additional Styling */
+  .highlight {
+    color: #00796b;
+    font-weight: bold;
+  }
+
+  /* Contact and Social Links */
+  .contact-info, .social-links {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .social-links a {
+    margin: 0 10px;
+    color: #00796b;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: #004d40;
+    transform: scale(1.1);
+  }
+</style>
+</head>
+<body>
+
+<div class="about-container">
+  <!-- Homepage Link with Animation -->
+  <a href="WelcomePage.html" class="home-link">HomePage</a>
+
+  <h2>About Us</h2>
+
+  <div class="section">
+    <h3>Our Mission</h3>
+    <p>At <span class="highlight">Secure Bank</span>, we believe in providing secure, convenient, and innovative financial solutions. We are here to empower our customers with financial confidence and support their goals.</p>
+  </div>
+
+  <div class="section">
+    <h3>Our Vision</h3>
+    <p>Our vision is to be the most trusted and customer-focused bank, offering unparalleled service and the latest in digital banking technology.</p>
+  </div>
+
+  <div class="section">
+    <h3>Why Choose Us?</h3>
+    <p>We’re committed to delivering the best banking experience:</p>
+    <ul>
+      <li><strong>Security First:</strong> Advanced security features protect your data and transactions.</li>
+      <li><strong>Exceptional Service:</strong> Our team is available 24/7 to help you with your needs.</li>
+      <li><strong>Community Driven:</strong> We give back through initiatives like <span class="highlight">Financial Literacy Programs</span> and local sponsorships.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Contact Us</h3>
+    <p>Need assistance? We’re here to help. Reach out to our customer service team or follow us on social media for updates:</p>
+    <div class="contact-info">
+      <p><strong>Email:</strong> supriyaachkulwar@gmail.com</p>
+      <p><strong>Phone:</strong> 917038878813</p>
+    </div>
+    <div class="social-links">
+      <a href="#">&#xf082; Facebook</a>
+      <a href="#">&#xf081; Twitter</a>
+      <a href="#">&#xf16d; LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

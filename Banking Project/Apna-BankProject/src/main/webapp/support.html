@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support - Bank Services</title>
+<style>
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Body Styling */
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #00796b, #2ec4b6, #cbf3f0);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  /* Container Styling */
+  .support-container {
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  /* Section Headings */
+  .support-container h2 {
+    font-size: 2rem;
+    color: #00796b;
+    margin-bottom: 1rem;
+    text-align: center;
+    animation: slideInDown 1.5s ease-in-out forwards;
+  }
+
+  .support-container h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #00796b;
+    display: block;
+    margin: 0.5rem auto;
+    border-radius: 2px;
+  }
+
+  /* Section Styling */
+  .section {
+    background: #f1f8f7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    transform: scale(0.9);
+    opacity: 0;
+    animation: scaleIn 1.2s ease-in-out forwards;
+  }
+
+  /* Section Content Styling */
+  .section p, .section ul, .section h3 {
+    color: #555;
+    margin-bottom: 1rem;
+  }
+
+  /* Contact Info */
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .contact-info li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Social Links */
+  .social-links a {
+    margin: 0 10px;
+    color: #00796b;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: #004d40;
+    transform: scale(1.1);
+  }
+
+  /* Form Styling */
+  .feedback-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+  }
+
+  .feedback-form button {
+    background-color: #00796b;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .feedback-form button:hover {
+    background-color: #004d40;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+</style>
+</head>
+<body>
+
+<div class="support-container">
+  <h2>Support Center</h2>
+
+  <!-- Contact Section -->
+  <div class="section contact-info">
+    <h3>Contact Us</h3>
+    <ul>
+      <li><strong>Email:</strong> <a href="supriyaachkulwar@gmail.com">support@securebank.com</a></li>
+      <li><strong>Phone:</strong> 917038878813 (24/7 Support)</li>
+      <li><strong>Live Chat:</strong> Available on our website from 8 AM to 10 PM</li>
+    </ul>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="section">
+    <h3>Frequently Asked Questions</h3>
+    <ul>
+      <li><strong>How do I reset my password?</strong> Go to the login page and click on 'Forgot Password'. Follow the instructions sent to your registered email.</li>
+      <li><strong>What do I do if I suspect fraudulent activity?</strong> Contact our support line immediately at (123) 456-7890 to report any suspicious activity.</li>
+      <li><strong>How can I set up two-factor authentication?</strong> Go to 'Security Settings' in your account and follow the instructions to set up two-factor authentication.</li>
+    </ul>
+  </div>
+
+  <!-- Security Tips Section -->
+  <div class="section">
+    <h3>Security Tips</h3>
+    <p>Your account security is important to us. Follow these tips to help protect your account:</p>
+    <ul>
+      <li>Enable two-factor authentication for added security.</li>
+      <li>Be cautious of phishing emails that ask for personal information.</li>
+      <li>Use a strong, unique password that you don’t use elsewhere.</li>
+    </ul>
+  </div>
+
+  <!-- Feedback Form -->
+  <div class="section feedback-form">
+    <h3>Feedback</h3>
+    <p>Have feedback or a specific issue? Let us know!</p>
+    <form action="/submit-feedback" method="POST">
+      <textarea name="feedback" placeholder="Write your feedback here..." required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Social Links -->
+  <div class="section social-links">
+    <h3>Follow Us for Support</h3>
+    <a href="https://facebook.com/securebank">Facebook</a>
+    <a href="https://twitter.com/securebank">Twitter</a>
+    <a href="https://linkedin.com/company/securebank">LinkedIn</a>
+  </div>
+</div>
+
+</body>
+</html>

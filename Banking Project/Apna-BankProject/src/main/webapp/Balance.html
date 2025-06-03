@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Form</title>
+    <style>
+        /* Background styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+        }
+
+        /* Form container styling */
+        .form-container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 320px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        /* Rotating title animation */
+        h1 {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 25px;
+            animation: rotateIn 1.5s ease;
+        }
+
+        /* Input fields styling */
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        /* Submit and clear buttons styling */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        /* Submit button with pulsing effect */
+        input[type="submit"] {
+            background-color: #007bff; /* Blue color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.2s ease;
+            animation: pulse 1.5s infinite;
+        }
+
+        input[type="submit"]:hover {
+            transform: scale(1.05);
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Clear button styling with lighter blue color */
+        input[type="reset"] {
+            background-color: #5bc0de; /* Lighter blue color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #31b0d5; /* Darker shade of light blue on hover */
+        }
+
+        /* Keyframes for fadeIn animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Keyframes for rotating title animation */
+        @keyframes rotateIn {
+            from {
+                transform: rotate(-90deg);
+                opacity: 0;
+            }
+            to {
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+        /* Keyframes for pulsing effect on the submit button */
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(0, 123, 255, 1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Welcome to Balance Form</h1>
+        <form action="bal" method="post">
+            Account No: <input type="text" name="ano"><br>
+            UserName: <input type="text" name="uname"><br>
+            Password: <input type="password" name="pword"><br>
+            <div class="button-container">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

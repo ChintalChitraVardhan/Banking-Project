@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deposit Form</title>
+<style>
+    /* Basic reset */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Center body content */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #e8f0fe;
+    }
+
+    /* Form container */
+    form {
+        background-color: #fff;
+        padding: 20px;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    /* Floating label style */
+    .form-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    label {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 0.9em;
+        color: #777;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    /* Input field style */
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 12px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus, input[type="password"]:focus {
+        border-color: #007bff;
+    }
+
+    /* Floating label effect when focused */
+    input[type="text"]:focus + label,
+    input[type="password"]:focus + label,
+    input[type="text"]:not(:placeholder-shown) + label,
+    input[type="password"]:not(:placeholder-shown) + label {
+        top: -10px;
+        left: 5px;
+        font-size: 0.75em;
+        color: #007bff;
+        background-color: #fff;
+        padding: 0 5px;
+    }
+
+    /* Submit and Reset button styling */
+    input[type="submit"], input[type="reset"] {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        font-size: 1em;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    input[type="submit"] {
+        background-color: #28a745;
+    }
+
+    input[type="reset"] {
+        background-color: #dc3545;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #218838;
+    }
+
+    input[type="reset"]:hover {
+        background-color: #c82333;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+</style>
+</head>
+<body>
+<form action="dep" method="post">
+    <h2 style="text-align: center; color: #333; margin-bottom: 20px;">Deposit Form</h2>
+    <div class="form-group">
+        <input type="text" name="acno" placeholder=" " required>
+        <label>Account Number</label>
+    </div>
+    <div class="form-group">
+        <input type="text" name="uname" placeholder=" " required>
+        <label>User Name</label>
+    </div>
+    <div class="form-group">
+        <input type="password" name="pword" placeholder=" " required>
+        <label>Password</label>
+    </div>
+    <div class="form-group">
+        <input type="text" name="amt" placeholder=" " required>
+        <label>Amount</label>
+    </div>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Clear">
+</form>
+</body>
+</html>
